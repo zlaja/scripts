@@ -6,7 +6,7 @@ NumThreads=`grep 'processor' /proc/cpuinfo | wc -l`
 
 echo ""
 echo ""
-echo "     -- SlimRoms --"
+echo "     -- NamelessROM --"
 echo ""
 echo ""
 
@@ -39,7 +39,7 @@ case  $option in
     ;;
   3)
     echo "Building ROM..."
-    . build/envsetup.sh && lunch slim_w5-userdebug && make -j$NumThreads bacon
+    . build/envsetup.sh && brunch w5
     progress=finished
     ;;
   4)
