@@ -39,7 +39,7 @@ case  $option in
     ;;
   3)
     echo "Building ROM..."
-    . build/envsetup.sh && lunch slim_w5-userdebug && make -j$NumThreads bacon
+    . build/envsetup.sh && USE_PREBUILT_CHROMIUM=1 && ANDROID_FIXUP_COMMON_OUT=true && brunch w5
     progress=finished
     ;;
   4)
